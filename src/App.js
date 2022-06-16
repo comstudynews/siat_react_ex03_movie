@@ -1,24 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
 
 function App() {
+  const menuItems = ['홈','프로필','갤러리','쇼핑몰']
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header items={menuItems} name="홍길자" title="홍길자의 여행정보 사이트"></Header>
+    </>
   );
 }
 
