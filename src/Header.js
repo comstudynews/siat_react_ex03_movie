@@ -9,14 +9,14 @@ class Header2 extends Component {
     render() {
       // 구조 분해 할당
         let {name} = this.state;
-        return <h1>{name}</h1>
+        return <h1>{this.props.title}</h1>
     }
 }
 // function으로 콤포넌트 생성 React16 이후에 많이 사용.
-function Header({items, name}) {
+function Header({items, name, title}) {
     //const {items, name} = props;
     return <><h2>{name}의 홈페이지</h2>
-        <Header2 />
+        <Header2 title={title} />
         <Menu items={items}/>
         </>;
 }

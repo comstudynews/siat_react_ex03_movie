@@ -4,14 +4,17 @@ function Menu(props) {
     // props.items.forEach((item,i) => {
     //     liArr.push(<li>{item}</li>);
     // })
-    function makeList() {
-        props.items.map((item,i) => {
-            return <li key={i}>{item}</li>;
-        });
-    }
-    let itemList = makeList();
+    ////////////////////////////////////////////////////////////////
+    // function makeList() {
+    //     return props.items.map((item,i) => {
+    //         return <li key={i}>{item}</li>;
+    //     });
+    // }
+    // let itemList = makeList();
     return (<ul>
-        {itemList}
+        {props.items.map((item,i) => {
+            return <li key={i}>{item}</li>;
+        })}
     </ul>);
 }
 
